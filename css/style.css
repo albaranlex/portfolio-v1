@@ -129,8 +129,9 @@ h1 {
     font-size: 13px;
 }
 .pointer p {
-
-    animation: .5s linear 1s infinite alternate slidein;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
 }
 
 .box4 {
@@ -178,8 +179,14 @@ h1 {
     transform: rotate(20deg);
 }
     
-@keyframes {
-    pointDown {
-        transform: translate(10px);
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
     }
-}
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
