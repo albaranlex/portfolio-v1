@@ -19,6 +19,8 @@ body {
     background: rgb(98, 98, 98);
   }
 
+
+  /* --MAIN --*/
 .main-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -27,7 +29,7 @@ body {
     "top top top"
     ". middle ."
     "bottom3 bottom bottom2";
-    margin: 20px 20px;
+    margin: 20px 5px;
     width: 96vw;
     height: 94vh;
     overflow: none;
@@ -260,6 +262,14 @@ h1 {
     }
     .triangle {
       display: none;
+    }
+
+    .box2 {
+      margin-top: -140px;
+    }
+
+    .box3 {
+      margin-top: -120px;
     }
   }
   
