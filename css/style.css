@@ -1,19 +1,21 @@
 body {
     background-color: #fadc65;
     margin: 0 auto;
+    font-family: Raleway;
 }
 
 .main-container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 12fr 4fr;
     grid-template-areas: 
     "top top top"
     ". middle ."
-    ". bottom bottom2";
+    "bottom3 bottom bottom2";
     margin: 20px 20px;
     width: 96vw;
-    height: 100vh;    
+    height: 94vh;
+    overflow-x: hidden;
 }
 
 .box1 {
@@ -85,34 +87,99 @@ body {
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
 
+.box2 .heading {
+    font-weight: 700;
+    font-size: 18px;
+}
 .box2 p {
     font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .box2 button {
     background-color: #25220d;
-    color: white;
+    color: rgba(255, 255, 255, 0.845);
     border-radius: 30px;
     border: none;
     width: 150px;
-    height: 30px;
+    height: 40px;
+    font-size: 10px;
+    font-family: Raleway;
+    font-weight: 700;
 }
 
+.box2 button:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
 .box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: bottom;
-    background-color: seagreen;
+    flex-direction: column;
 }
 
-.box3 i {
-    color: black;
+.box3 .scroll {
+    font-size: 13px;
+}
+.pointer p {
 
+    animation: .5s linear 1s infinite alternate slidein;
 }
 
 .box4 {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     grid-area: bottom2;
-    background-color: sienna;
+}
+
+.box4 a {
+    font-size: 20px;
+    color: black;
+    margin: 10px 20px;
+}
+
+.box5 {
+    position: relative;
+}
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+    border: 20px solid white;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    border-radius: 100px;
+}
+.circle2 {
+    width: 200px;
+    height: 200px;
+    border: 20px solid white;
+    position: absolute;
+    top: 420px;
+    left: 450px;
+    border-radius: 200px;
+}
+
+.triangle {
+    width: 150px;
+    height: 150px;
+    border: 20px solid white;
+    position: absolute;
+    left: 860px;
+    transform: rotate(20deg);
+}
+    
+@keyframes {
+    pointDown {
+        transform: translate(10px);
+    }
 }
