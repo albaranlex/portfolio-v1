@@ -234,7 +234,6 @@ h1 {
     border-radius: 100px;
 }
 
-
 .triangle {
     width: 150px;
     height: 150px;
@@ -270,8 +269,21 @@ h1 {
     }
 
     .box3 {
+      margin-top: -200px;
+    }
+
+    .circle2 {
+    width: 170px;
+    height: 90px; 
+    background-color: transparent;
+    border-top-left-radius: 120px; 
+    border-top-right-radius: 120px; 
+    }
+
+    .box4 {
       margin-top: -120px;
     }
+
   }
   
 
