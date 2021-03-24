@@ -20,19 +20,17 @@
             </div>
             
             <div class="menu">
-                <div class="hamburger">
+                <div class="hamburger" onclick="openNav()">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-                <div class="side-menu">
-                    <ul>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#">Advance level</a></li>
-                    <li><a href="#">New Features</a></li>
-                    </ul>
-                </div>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Contact</a>
+
+                  </div>
             </div>
         </div>
 
@@ -57,7 +55,6 @@
         <div class="box4">
             <div>
                 <div><a href="#" class="fa fa-github"></a></div>
-            
                 <div><a href="#" class="fa fa-linkedin"></a></div>
             </div>
         </div>
@@ -69,16 +66,14 @@
         
     </div>
     <script>
-        let clicked = false;
-        document.querySelector('.hamburger').addEventListener("click",()=>{
-        clicked= !clicked;
-            console.log(clicked);
-            if(clicked){
-                document.querySelector('.side-menu').style.cssText = "display: block; position: absolute;top: 3vh;left:0;z-index: 1;"
-            } else{
-                document.querySelector('.side-menu').style.cssText = "display: none;"
-            }
-        })
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        }
+
+/* Set the width of the side navigation to 0 */
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        }
     </script>
 </body>
 </html>
