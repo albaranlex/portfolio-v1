@@ -242,6 +242,7 @@ h1 {
     position: absolute;
     left: 860px;
     transform: rotate(20deg);
+    z-index: -1;
 }
     
 @keyframes bounce {
