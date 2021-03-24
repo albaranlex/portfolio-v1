@@ -49,16 +49,18 @@ body {
 }
 .hamburger {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    align-self: center;
     flex-direction: column;
-    width: 3rem;
-    height: 3rem;
+    width: 1.5rem;
+    height: 1rem;
   }
   
 .hamburger div {
-    width: 2.5rem;
+    width: 1rem;
     border: 2px black solid;
+    margin: 2px;
   }
 
   .hamburger:hover {
