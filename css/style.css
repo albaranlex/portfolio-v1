@@ -110,6 +110,7 @@ h1 {
 }
 
 .box4 {
+    display: flex;
     grid-area: bottom2;
     background-color: sienna;
 }
