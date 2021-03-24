@@ -1,0 +1,24 @@
+body {
+    background-color: whitesmoke;
+    margin: 0 auto;
+}
+
+.main-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.box {
+    width: 70vw;
+    height: 100vh;
+    background-color: #1a1818;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 355px solid transparent;
+    border-left: 400px solid #1a1818;
+    border-bottom: 400px solid transparent;
+}
