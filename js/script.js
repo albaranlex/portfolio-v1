@@ -14,7 +14,7 @@ function changeImg(image){
 
 /* SUBMIT FORM */
   function openForm() {
-    document.getElementById("my-form").style.width = "500px";
+    document.getElementById("my-form").style.width = "300px";
   }
   
   /* Set the width of the side navigation to 0 */
