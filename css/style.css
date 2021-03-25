@@ -352,8 +352,13 @@ h2 {
   margin: 1px 15px;
   padding-left: 15px;
 }
-.project-list a:visited {
-  color: black;
+
+.project-list li a:active {
+  color: white;
+}
+.project-list li a:visited {
+  color: inherit;
+
 }
 
 .project-list li:hover {
@@ -385,6 +390,20 @@ h2 {
     left: 15px;
   }
 
+  .view-box {
+    height: 400px;
+    width: 500px;
+    background-color: transparent;
+    border: 8px solid black;
+  }
+
+  .imageholder {
+    transition: 2s;
+  }
+  .imageholder img {
+    width: 100%;
+    height: 100%;
+  }
 
   @media (max-width: 1024px){
     .circle1 {

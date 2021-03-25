@@ -6,8 +6,8 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     }
 
-/* Infinite Scroll Nav */
-$('li').click(function(){
-    $(this).prependTo($(this).parent());
-    })
-
+/* show image on viewbox */
+function changeImg(image){
+    var imghol = document.getElementById("imageHolder");
+    imghol.src = image;
+  }
