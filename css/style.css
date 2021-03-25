@@ -343,27 +343,19 @@ h2 {
 .project-list {
   width: 500px;
   margin-left: 200px;
+ 
 }
-.project-list ul {
-  list-style: none;
-}
-
 .project-list li  {
   margin: 1px 15px;
   padding-left: 15px;
-}
-
-.project-list li a:active {
-  color: white;
-}
-.project-list li a:visited {
-  color: inherit;
-
+  list-style: none;
+  z-index: 1;
 }
 
 .project-list li:hover {
   transform: translateY(-5px);
   transition: 0.2s;
+  color: black;
 }
 
 .border {
@@ -373,6 +365,7 @@ h2 {
     left: -10px;
     margin-bottom: 40px;
   }
+
 .bullet {
     background-color: none;
     width: 8px;
@@ -405,6 +398,19 @@ h2 {
     height: 100%;
   }
 
+.next-page {
+  margin-top: -100px;
+  width: 96vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.next-page a:visited {
+  color: black;
+
+}
 
 /* CONTACT-SECTION */
 #contact {
@@ -438,23 +444,30 @@ padding: 15px 20px;
   flex-direction: row;
 }
 
+.social-contacts div {
+  margin: 0 20px;
+  font-size: 30px;
+  color: black;
+}
+.social-contacts div a:visited {
+  color: black;
+}
+
 .submit-icon {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.submit-icon div {
-  background-color: black;
-  color: white;
-}
 
 .submit-icon button {
-  width: 40px;
-  height: 350px;
+  width: 350px;
+  height: 40px;
+  transform: rotate(-90deg);
+  margin-left: -160px;
   border: none;
   background-color: black;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .collapse-form {
