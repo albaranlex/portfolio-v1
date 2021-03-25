@@ -426,7 +426,7 @@ h2 {
 
 .email-id {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   align-items: center;
 }
@@ -471,16 +471,15 @@ padding: 15px 20px;
 }
 
 .collapse-form {
-  height: 400px; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  height: 400px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   bottom: 0; 
   color: white;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s; 
 }
 
 .collapse-form .closebtn {
@@ -490,6 +489,38 @@ padding: 15px 20px;
   font-size: 36px;
   margin-left: 50px;
 }
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+
+}
+
+.form-field h2 {
+  padding: 30px 0;
+
+}
+.form-field label {
+  padding-bottom: 50px;
+}
+
+.form-field input {
+  background-color: transparent;
+  color: rgba(128, 128, 128, 0.527);
+  border: 2px solid white;
+  margin: 20px 0px;
+  margin-top: 10px;
+  padding: 5px 0px;
+  width:300px;
+}
+
+.form-field input:active {
+ color: white;
+}
+
 
   @media (max-width: 1024px){
     .circle1 {
