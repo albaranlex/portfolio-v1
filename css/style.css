@@ -9,6 +9,11 @@ body {
     overflow: none;
 }
 
+a, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* ---------------SCROLL BAR--------------- */
 ::-webkit-scrollbar {
     width: 10px;
@@ -59,7 +64,7 @@ body {
 .firstName {
     color: #000000;
     font-family: 'Raleway' sans-serif;
-    font-weight: bolder;
+    font-weight: 800;
 }
 
 .lastName {
@@ -212,7 +217,8 @@ h1 {
     margin-top: 50px;
     font-size: 13px;
 }
-.pointer p {
+
+.pointer i {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
@@ -225,14 +231,10 @@ h1 {
     grid-area: bottom2;
 }
 
-.box4 a {
+.box4 i {
     font-size: 20px;
     color: black;
     margin: 10px 20px;
-}
-
-.box5 {
-    position: relative;
 }
 
 .circle1 {
@@ -269,7 +271,7 @@ h1 {
     overflow: none;
 }
 .project-header {
-  margin-top: 10px;
+  margin-top: 30px;
   grid-area: head;
   display: flex;
   justify-content: flex-start;
@@ -331,6 +333,7 @@ span {
 .project-list {
   width: 500px;
   margin-left: 200px;
+  color: black;
  
 }
 .project-list li  {
@@ -364,7 +367,7 @@ span {
 
 .line {
     background-color: white;
-    width: 400px;
+    width: 350px;
     height: 3px;
     position: absolute;
     top: 8px;
@@ -372,8 +375,8 @@ span {
   }
 
   .view-box {
-    height: 400px;
-    width: 500px;
+    height: 320px;
+    width: 550px;
     background-color: transparent;
     border: 8px solid black;
   }
@@ -382,8 +385,8 @@ span {
     transition: 2s;
   }
   .imageholder img {
-    width: 100%;
-    height: 100%;
+    width: 550px;
+    height: 320px;
   }
 
 .next-page {
@@ -442,14 +445,22 @@ padding: 15px 20px;
   color: black;
 }
 
-.submit-icon {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: absolute;
-  bottom: 293px; 
+.social-contacts i {
+  font-size: 25px;
 }
 
+.submit-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 293px; 
+  text-align: left;
+}
+
+.submit-text {
+  width: 65px;
+}
 .submit-icon button {
   width: 350px;
   height: 40px;
@@ -461,13 +472,21 @@ padding: 15px 20px;
   font-size: 12px;
 }
 
+.pointer-right i {
+  font-size: 20px;
+  -moz-animation: bounce-right 2s infinite;
+  -webkit-animation: bounce-right 2s infinite;
+  animation: bounce-right 2s infinite;
+
+}
+
 .collapse-form {
   height: 400px;
   width: 0;
   position: absolute;
   z-index: 1;
   bottom: 88px; 
-  left: 80px;
+  left: 45px;
   color: white;
   background-color: #111;
   overflow-x: hidden;
@@ -510,7 +529,7 @@ padding: 15px 20px;
   width:200px;
 }
 
-.form-field input:active {
+.form-field input:focus {
  color: white;
 }
 
@@ -532,7 +551,19 @@ padding: 15px 20px;
   }
 }
 
-@media (max-width: 1024px){
+@keyframes bounce-right {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+
+@media (max-width: 1257px){
     
   /* MAIN-SECTION */
     .circle1 {
@@ -575,12 +606,6 @@ padding: 15px 20px;
     .view-box {
       display: none;
     }
-
- /* CONTACT-SECTION */
-    .collapse-form {
-      left: 50px;
-    }
-  }
 
 
   
