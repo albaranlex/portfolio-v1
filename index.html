@@ -66,51 +66,21 @@
 <section id="projects-section">
         <div class = "project-header">
             <span><h2>PROJECTS</h2></span>
-            <span><p>Most of these projects are just small components of a page
             </p></span>
             <span class="box"></span>
         </div>
 
         <div class="project-content">
-            <div class = "circle3"> CIRCLE1</div>
-            <div class = "circle4"> CIRCLE2</div>
-
-            <div class="project-list">
-                <ul>
-                    <li><a id="price-panel" href="javascript:" onclick="changeImg('./img/price-panel.png');"> Pricing Panel Project</a></li>
-                        <div class="border">
-                        <div class ="bullet"></div><div class="line"></div>
-                        </div>
-                    <li><a id="wall-app" href="javascript:" onclick="changeImg('./img/wall-app.png');">Wall App Gallery</a></li>
-                        <div class="border">
-                            <div class ="bullet"></div><div class="line"></div>
-                        </div>
-                    <li><a id="periodic-table" href="javascript:" onclick="changeImg('./img/periodic-table.png');">Periodic Table of Elements</a></li>
-                        <div class="border">
-                            <div class ="bullet"></div><div class="line"></div>
-                        </div>
-                    <li><a id="mobile-app" href="javascript:" onclick="changeImg('./img/mobile-app.png');">Mobile App</a></li>
-                        <div class="border">
-                            <div class ="bullet"></div><div class="line"></div>
-                        </div>
-                    <li><a id="log-in-panel" href="javascript:" onclick="changeImg('./img/log-in-panel.png');">Log in Panel</a></li>
-                        <div class="border">
-                            <div class ="bullet"></div><div class="line"></div>
-                        </div>
-                </ul>
-                </div>
-                
-                <div class = view-box>
-                    <div class="imageholder"><img id="imageHolder"/></div>
-                </div>
-               
+ 
         </div>
+          
         <div class="next-page">
             <div><a href="#contact"><p class="scroll">MORE</p></div>
                 <div class ="pointer"><i class="fas fa-chevron-down"></i></div></a>
             </div>
         </div>
     </section>
+
     <section id="contact">
         <div class = "email-id"><p>ALBARANLEX@ICLOUD.COM</p>
             <div class = "social-contacts">
@@ -118,8 +88,13 @@
                 <div><a href="https://github.com/albaranlex" target="_blank"><i class="fab fa-github"></i></a></div>
             </div>
         </div> 
-        <div id="my-form" class = "collapse-form">
-                <div><a href="javascript:void(0)" class="closebtn" onclick="closeForm()">&times;</a></div>
+
+        <div class="collapse-form">
+        <div id="footer"> 
+            <div id="footerbuttondown"><i class="fas fa-chevron-down"></i></div>
+            <div id="footerbuttonup"><i class="fas fa-chevron-up"></i></div>
+            
+            <div id="footercont">
                 <div class = "form-field">
                     <h2>Submit A Form</h2>
                     <form action="#">
@@ -132,14 +107,38 @@
                       <button> SUBMIT </button>
                     </form> 
                 </div>
-              </div>
-        <div class = "submit-icon">
-                <div class = "submit-text" onclick="openForm()"><button> SUBMIT A FORM</button></div>
-                <div class="pointer-right"><i class="fas fa-chevron-right"></i></div>
+            </div>
         </div>
-       
+    </div>
+          <!--end of footer-->
     </section>
+<script>
+document.getElementById("footerbuttondown").onclick = function(){shrink()};
+document.getElementById("footerbuttonup").onclick = function(){expand()};
+document.getElementById("footer").style.height= "30px"; 
+document.getElementById("footercont").style.visibility = "hidden";
+document.getElementById("footerbuttonup").style.visibility="visible";
+document.getElementById("footerbuttondown").style.visibility="hidden";
+ 
+function shrink(){
+  if (document.getElementById("footer").style.height= "300px") {
+    document.getElementById("footer").style.height= "30px";
+    document.getElementById("footerbuttondown").style.visibility="hidden";  
+ 	document.getElementById("footerbuttonup").style.visibility="visible";  
+    document.getElementById("footercont").style.opacity="0";  
+    document.getElementById("footercont").style.visibility="hidden";                              
+  }
+}
 
-
+function expand(){
+  if (document.getElementById("footer").style.height= "30px") {  
+    document.getElementById("footer").style.height= "500px";
+    document.getElementById("footerbuttondown").style.visibility="visible";  
+ 	document.getElementById("footerbuttonup").style.visibility="hidden";  
+    document.getElementById("footercont").style.opacity="1";  
+    document.getElementById("footercont").style.visibility="visible";                                             
+  }
+}
+</script>
 </body>
 </html>

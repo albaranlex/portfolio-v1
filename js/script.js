@@ -5,19 +5,5 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     }
-
-/* show image on viewbox */
-function changeImg(image){
-    var imghol = document.getElementById("imageHolder");
-    imghol.src = image;
-  }
-
+1
 /* SUBMIT FORM */
-  function openForm() {
-    document.getElementById("my-form").style.width = "300px";
-  }
-  
-  /* Set the width of the side navigation to 0 */
-  function closeForm() {
-    document.getElementById("my-form").style.width = "0";
-  }
