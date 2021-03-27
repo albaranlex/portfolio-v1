@@ -524,31 +524,40 @@ padding: 15px 20px;
 .form-field h2 {
   padding: 30px 0;
   margin: 0;
+  color: #fadf4b;
 
 }
 .form-field label {
   padding-bottom: 50px;
 }
 
-.form-field input {
+.form-field 
+  input, textarea {
   background-color: transparent;
-  color: rgba(128, 128, 128, 0.527);
+  color: #80808086;
   border: 2px solid white;
   margin: 20px 0px;
   margin-top: 10px;q
   padding: 5px 0px;
   width:330px;
+  height: 30px;
 }
 
 .form-field input:focus {
  color: white;
 }
 
-#contact-message {
- height: 150px;
+textarea {
+ height: 120px;
  text-align: left;
-
+ resize: none;
 }
+
+.form-field textarea:focus {
+  color: white;
+  text-decoration: none;
+  outline: none;
+ }
 .form-field button {
   border: 2px solid #fadf4b;
   background-color: transparent;
