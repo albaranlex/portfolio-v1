@@ -17,7 +17,7 @@
         <div class="box1">
             
             <div class= "logo">
-                <span><p class="firstName">ALEX</p></span><p class="lastName">ALBARAN</p></span>
+               <img src="./img/logo.png" alt="Alex Albaran">
             </div>
             
             <div class="menu">
@@ -36,8 +36,12 @@
         </div>
 
         <div class="box2">
-            <div><h1>Junior Web Developer</h1></div>
-            <div><p class="heading">My name is Alex and i'm a developer based in Germany.</p></div>
+            <div>
+                <h2>Junior Developer</h2>
+                <hr/>
+                <h2>UX / UI Designer</h2>
+            </div>
+        
             <div><a href="#contact"><button>Get in Touch</a></button></div>
         </div>
 
@@ -66,8 +70,10 @@
     <section id="projects-section">
         <div class = "project-header">
             <span><h2>PROJECTS</h2></span>
-            </p></span>
-            <span class="box"></span>
+            <span class="projects-underline"></span>
+            <span class="projects-slant"></span>
+            <span class="projects-upperline"></span>
+
         </div>
 
         <div class="captions-media">
@@ -246,11 +252,11 @@
                     <h2>Submit A Form</h2>
                     <form action=”mailto:albaranlex@icloud.com”>
                       <label for="fname">Name</label><br>
-                      <input type="text" id="fname" placeholder="John Doe" onfocus="this.placeholder = ''"onblur="this.placeholder = 'John Doe'" /><br>
+                      <input type="text" id="fname" placeholder="John Doe" onfocus="this.placeholder = ''"onblur="this.placeholder = 'John Doe'" required/><br>
                       <label for="lname">Email</label><br>
                       <input type="text" id="lname" placeholder="johndoe@email.com" onfocus="this.placeholder = ''"onblur="this.placeholder = 'johndoe@email.com" required/><br>
                       <label for="message">Message</label><br>
-                      <textarea class = "message-text" placeholder="What's on your mind?"></textarea><br><br>
+                      <textarea class = "message-text" placeholder="What's on your mind?" required></textarea><br><br>
                       <button> SUBMIT </button>
                     </form> 
                 </div>
