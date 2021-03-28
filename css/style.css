@@ -17,7 +17,7 @@ a, a:focus, a:active {
 /* ---------------SCROLL BAR--------------- */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+  }button
   ::-webkit-scrollbar-track {
     background: #050505;
   }
@@ -98,9 +98,6 @@ a, a:focus, a:active {
 .hamburger:hover {
       cursor: pointer;
   }
-a {
-    text-decoration: none;
-}
 
 .sidenav {
     height: 100%;
@@ -132,7 +129,7 @@ a {
     padding-left: 8px;
 }
 
-.sidenav a:hover {
+a:hover {
     color: #f1f1f1;
   }
 
@@ -258,21 +255,15 @@ h1 {
 }
     
   /* Projects Section */
-
-  /* SLIDER */
-  
-
-  /* END OF SLIDER */
   
 #projects-section {
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 10% 70% 10% 5%;
+    grid-template-columns: 30% 60% 10%;
+    grid-template-rows: 5% 80% 5%;
     grid-template-areas: 
-    "head head"
-    ". proj-img"
-    ". proj-content"
-    "next next";
+    "head head head"
+    "proj-media proj-img ."
+    "next next next";
     margin: 10px 5px;
     width: 96vw;
     height: 96vh;
@@ -285,10 +276,6 @@ h1 {
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
-}
-
-span {
-  margin-top:
 }
 
 .box {
@@ -305,111 +292,112 @@ span {
   padding-right: 40px;
 }
 
-.project-header p {
-  font-size: 15px;
-}
-.project-content {
-  grid-area: proj-content;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: relative;
-}
+/* Slideshow container */
 
-.circle3 {
-  background-color: transparent;
-  width: 200px;
-  height: 200px;
-  border: 15px solid white;
-  border-radius: 200px;
-  position: absolute;
-  left: -125px;
-}
-
-.circle4 {
-  background-color: transparent;
-  width: 130px;
-  height: 130px;
-  border: 15px solid white;
-  border-radius: 200px;
-  position: absolute;
-  left: -90px;
-  top: 35px;
-}
-
-.project-list {
-  width: 500px;
-  margin-left: 200px;
-  color: black;
- 
-}
-.project-list li  {
-  margin: 1px 15px;
-  padding-left: 15px;
-  list-style: none;
-  z-index: 1;
-}
-
-.project-list li:hover {
-  transform: translateY(-5px);
-  transition: 0.2s;
-  color: black;
-}
-
-.border {
-    display: flex;
-    position: relative;
-    top: -3px;
-    left: -10px;
-    margin-bottom: 40px;
-  }
-
-.bullet {
-    background-color: none;
-    width: 8px;
-    height: 8px;
-    border: 5px solid white;
-    border-radius: 100px;
-  }
-
-.line {
-    background-color: white;
-    width: 350px;
-    height: 3px;
-    position: absolute;
-    top: 8px;
-    left: 15px;
-  }
-
-  .view-box {
-    height: 320px;
-    width: 550px;
-    background-color: transparent;
-    border: 8px solid black;
-  }
-
-  .imageholder {
-    transition: 2s;
-  }
-  .imageholder img {
-    width: 550px;
-    height: 320px;
-  }
-
-.next-page {
-  margin-top: -100px;
-  width: 96vw;
+.viewbox {
+  grid-area: proj-img;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  grid-area: next;
+  margin-left: -18%;
+  margin-right: 20%;
+ 
 }
 
-.next-page a:visited {
+.slideshow-container {
+  width: 605px;
+  height:350px; 
+  border: 10px solid black;
+}
+.slideshow-container img {
+  width: 100%;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  padding: 16px;
   color: black;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: white;
+}
+
+/* Caption text */
+.captions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.project-name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 0px;
+  border-bottom: 2px solid black;
+}
+
+.languages {
+  display: flex;
+  padding-top: 10px;
 
 }
+.lang-html, .lang-css, .lang-responsive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  text-align: center; 
+  margin-right: 10px;
+}
+
+.lang-responsive {
+  width: 150px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.next-page {
+  grid-area: next;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: auto;
+}
+
+.captions-media {
+  grid-area: proj-media;
+  margin-top: 50px;
+  margin-left:50px;
+  width: 300px;
+  display: none;
+}
+
 
 /* CONTACT-SECTION */
 #contact {
@@ -436,7 +424,6 @@ font-size: 12px;
 border: 5px solid white;
 margin: 10px;
 padding: 15px 20px;
-
 }
 
 .social-contacts {
@@ -485,6 +472,7 @@ padding: 15px 20px;
   top:-20px;
   border-radius:5px;
   border-radius:5px;
+  cursor: pointer;
 }
 #footerbuttonup{
 	color: black;
@@ -498,6 +486,7 @@ padding: 15px 20px;
   border-radius:5px;
   border-radius:5px;
   visibility:hidden;
+  cursor: pointer;
 }
 #footercont{
   position:absolute;
@@ -556,7 +545,7 @@ textarea {
 .form-field textarea:focus {
   color: white;
   text-decoration: none;
-  outline: none;
+  outline: 0;
  }
 .form-field button {
   border: 2px solid #fadf4b;
@@ -574,6 +563,16 @@ textarea {
   60% {
     transform: translateY(-5px);
   }
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 @media (max-width: 1257px){
@@ -605,18 +604,35 @@ textarea {
     .box4 {
       margin-top: -150px;
     }
+ 
+    /* PROJECTS */
+    .captions-media {
+      display: unset;
 
-    /* PROJECTS-SECTION */
-
-    .line {
-      width: 250px;
     }
 
-    .project-list {
-      margin: 0 50px;
-      margin-left: 150px;
+    .languages {
+      margin-bottom: 20px;
     }
 
-    .view-box {
-      display: none;
+  
+    .lang-html, .lang-css, .lang-responsive {
+      height: 15px;
+      font-size: 8px;
     }
+    .viewbox {
+     display: none;
+   }
+   .next-page {
+     background-color: teal;
+     margin-left: 50%;
+     margin-right: 50%;
+  }
+
+  };
+
+  
+
+ 
+    
+   
