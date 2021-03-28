@@ -28,8 +28,8 @@
                 </div>
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Contact</a>
+                    <a href="#projects-section">Projects</a>
+                    <a href="#contact">Contact</a>
 
                   </div>
             </div>
@@ -38,7 +38,7 @@
         <div class="box2">
             <div><h1>Junior Web Developer</h1></div>
             <div><p class="heading">My name is Alex and i'm a developer based in Germany.</p></div>
-            <div><button>Get in Touch</button></div>
+            <div><a href="#contact"><button>Get in Touch</a></button></div>
         </div>
 
         <div class="box3">
@@ -244,11 +244,11 @@
             <div id="footercont">
                 <div class = "form-field">
                     <h2>Submit A Form</h2>
-                    <form action="#">
+                    <form action=”mailto:albaranlex@icloud.com”>
                       <label for="fname">Name</label><br>
-                      <input type="text" id="fname" name="fname" value="John Doe"><br>
+                      <input type="text" id="fname" placeholder="John Doe" onfocus="this.placeholder = ''"onblur="this.placeholder = 'John Doe'" /><br>
                       <label for="lname">Email</label><br>
-                      <input type="text" id="lname" name="lname" value="john-doe@google.com" required><br>
+                      <input type="text" id="lname" placeholder="johndoe@email.com" onfocus="this.placeholder = ''"onblur="this.placeholder = 'johndoe@email.com" required/><br>
                       <label for="message">Message</label><br>
                       <textarea class = "message-text" placeholder="What's on your mind?"></textarea><br><br>
                       <button> SUBMIT </button>

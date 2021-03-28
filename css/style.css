@@ -537,10 +537,9 @@ padding: 15px 20px;
   width: 330px;
   height: 30px;
   font-family: Helvetica;
-  
 }
 
-.form-field input:focus {
+.form-field input:focus, .form-field input:valid {
  color: white;
  text-decoration: none;
  outline: 0;
@@ -552,7 +551,7 @@ textarea {
  resize: none;
 }
 
-.form-field textarea:focus {
+.form-field textarea:focus, .form-field textarea:valid {
   color: white;
   text-decoration: none;
   outline: 0;
