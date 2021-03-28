@@ -5,7 +5,37 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     }
-1
+
+/* FOOTER */ 
+window.onload = function () {
+document.getElementById("footerbuttondown").onclick = function(){shrink()};
+document.getElementById("footerbuttonup").onclick = function(){expand()};
+document.getElementById("footer").style.height= "30px"; 
+document.getElementById("footercont").style.visibility = "hidden";
+document.getElementById("footerbuttonup").style.visibility="visible";
+document.getElementById("footerbuttondown").style.visibility="hidden";
+ 
+function shrink(){
+  if (document.getElementById("footer").style.height= "300px") {
+    document.getElementById("footer").style.height= "30px";
+    document.getElementById("footerbuttondown").style.visibility="hidden";  
+ 	document.getElementById("footerbuttonup").style.visibility="visible";  
+    document.getElementById("footercont").style.opacity="0";  
+    document.getElementById("footercont").style.visibility="hidden";                              
+  }
+}
+
+function expand(){
+  if (document.getElementById("footer").style.height= "30px") {  
+    document.getElementById("footer").style.height= "500px";
+    document.getElementById("footerbuttondown").style.visibility="visible";  
+ 	document.getElementById("footerbuttonup").style.visibility="hidden";  
+    document.getElementById("footercont").style.opacity="1";  
+    document.getElementById("footercont").style.visibility="visible";                                             
+  }
+}
+};
+    
 /* SLIDER */
 var slideIndex = 1;
 showSlides(slideIndex);
