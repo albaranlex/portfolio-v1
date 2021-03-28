@@ -527,20 +527,23 @@ padding: 15px 20px;
   padding-bottom: 50px;
 }
 
-.form-field 
-  input, textarea {
+.form-field input, textarea {
   background-color: transparent;
   color: #80808086;
   border: 2px solid white;
   margin: 20px 0px;
   margin-top: 10px;q
   padding: 5px 0px;
-  width:330px;
+  width: 330px;
   height: 30px;
+  font-family: Helvetica;
+  
 }
 
 .form-field input:focus {
  color: white;
+ text-decoration: none;
+ outline: 0;
 }
 
 textarea {
