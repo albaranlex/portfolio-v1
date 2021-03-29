@@ -7,6 +7,7 @@ body {
     background-color: #fadf4b;
     margin: 0 auto;
     font-family: Raleway;
+    overflow-x: hidden;
 }
 
 a, a:focus, a:active {
