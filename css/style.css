@@ -1,12 +1,12 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
     background-color: #fadf4b;
     margin: 0 auto;
     font-family: Raleway;
-    overflow: none;
 }
 
 a, a:focus, a:active {
@@ -14,7 +14,11 @@ a, a:focus, a:active {
   color: inherit;
 }
 
-/* ---------------SCROLL BAR--------------- */
+a:hover {
+  color: #f1f1f1;
+}
+
+/* -- SCROLL BAR -- */
 ::-webkit-scrollbar {
     width: 10px;
   }button
@@ -29,7 +33,7 @@ a, a:focus, a:active {
   }
 
 
-  /* --MAIN --*/
+  /* --MAIN -- */
 #main-section {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -38,14 +42,14 @@ a, a:focus, a:active {
     "top top top"
     ". middle ."
     "bottom3 bottom bottom2";
-    margin: 20px 5px;
+    margin: 20px 20px;
     margin-bottom: 50px;
     width: 96vw;
     height: 100vh;
     overflow: none;
 }
 
-.box1 {
+.header {
     display: flex;
     padding: 20px;
     justify-content: space-between;
@@ -57,53 +61,26 @@ a, a:focus, a:active {
 }
 
 /* HAMBURGER MENU */
-.menu {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+
+.return-top {
+  background-color: #000000b2;
+  color: #ffffffc0;
+  height: 16px;
+  padding: 10px;
+  font-size: 12px;
+  position: fixed;
+  right: 4%;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 10px;
 }
-.hamburger {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    flex-direction: column;
-    width: 1.5rem;
-    height: 1rem;
-  }
-  
-.hamburger div {
-    width: 1rem;
-    border: 2px black solid;
-    margin: 2px;
-  }
 
-.hamburger:hover {
-      cursor: pointer;
-  }
+.return-top:hover {
+  transform: translateY(-3px);
+  transition: 0.2s;
+  color: white;
 
-.sidenav {
-    height: 100%;
-    width: 0; 
-    position: fixed;
-    z-index: 1;
-    top: 0; 
-    right: 0;
-    background-color: #111111; 
-    overflow-x: hidden; 
-    padding-top: 60px; 
-    transition: 0.5s; 
-  }
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-
+}
 .social {
     color: #FFFFFF;
     border-bottom:1px solid #FFFFFF;
@@ -112,19 +89,7 @@ a, a:focus, a:active {
     padding-left: 8px;
 }
 
-a:hover {
-    color: #f1f1f1;
-  }
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-
-.box2 {
+.main-content {
     grid-area: middle;
     align-self: center;
     text-align: center;
@@ -139,13 +104,13 @@ h2 {
     font-size: 30px;
 }
 
-.box2 hr {
+.main-content hr {
   height: 3px;
   background-color: white;
   border: none;
 }
 
-.box2 button {
+.main-content button {
     background-color: #25220d;
     color: rgba(255, 255, 255, 0.845);
     border-radius: 30px;
@@ -158,11 +123,11 @@ h2 {
     margin-top: 50px;
 }
 
-.box2 button:hover {
+.main-content button:hover {
     transform: translateY(-3px);
     transition: 0.2s;
 }
-.box3 {
+.main-footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,18 +169,20 @@ h2 {
     animation: bounce 2s infinite;
 }
 
-.box4 {
+.main-social {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     grid-area: bottom2;
 }
 
-.box4 i {
+.main-social i {
     font-size: 20px;
     color: black;
     margin: 10px 20px;
 }
+
+/* MAIN BG SHAPES */
 
 .circle1 {
     width: 100px;
@@ -247,7 +214,7 @@ h2 {
     "head head head"
     "proj-media proj-img ."
     "next next next";
-    margin: 10px 5px;
+    margin: 20px 20px;
     width: 96vw;
     height: 100vh;
     overflow: none;
@@ -283,7 +250,7 @@ h2 {
 }
 
 .projects-upperline {
-  width: 70%;
+  width: 70vw;
   position: absolute;
   left: 244px;
   top: 2px;
@@ -407,7 +374,8 @@ h2 {
     display: grid;
     align-self: center;
     grid-template-rows: 1fr 3fr;
-    margin: 0px 5px;
+    margin: 20px 20px;
+    margin-bottom: 0;
     width: 96vw;
     height: 100vh;
     position: relative;
@@ -463,7 +431,7 @@ padding: 15px 20px;
   background-color: black;
   color:white;
   width:100%;
-  height:500px;   /* Height of the footer */
+  height: 500px; 
     -webkit-transition: height 1s, visibility 1s;
     transition: height 1s, visibility 1s;
   position: absolute;
@@ -480,6 +448,7 @@ padding: 15px 20px;
   border-radius:5px;
   cursor: pointer;
 }
+
 #footerbuttonup{
 	color: black;
   font-size: 20px;
@@ -497,10 +466,10 @@ padding: 15px 20px;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
-#footercont{
-  position:absolute;
-  top:0px;
-  opacity:1;
+#footercont {
+  position: absolute;
+  top: 0px;
+  opacity: 1;
   transition: opacity 1s, visibility 2s, display 2s;
 }
 #centerbutton{
@@ -608,10 +577,6 @@ textarea {
       display: none;
     }
 
-    .box2 {
-      margin-top: -100px;
-    }
-
     .box3 {
       margin-top: -50px;
     }
@@ -652,8 +617,15 @@ textarea {
   }
 
   }
+  @media (max-width: 480px){
 
-  
+  #main-section, #projects-section, #contact-section {
+    margin: 10px;
+  }
+  .projects-upperline {
+    width: 40vw;
+  }
+  }
 
  
     
