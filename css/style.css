@@ -82,6 +82,7 @@ a:hover {
   color: white;
 
 }
+
 .social {
     color: #FFFFFF;
     border-bottom:1px solid #FFFFFF;
@@ -364,7 +365,7 @@ h2 {
 .captions-media {
   grid-area: proj-media;
   margin-top: 50px;
-  margin-left:40px;
+  margin-left: 40px;
   width: 400px;
   display: none;
 }
@@ -595,22 +596,21 @@ textarea {
     }
  
     /* PROJECTS */
-    .captions-media {
-      display: unset;
-
-    }
-
     .languages {
       margin-bottom: 20px;
     }
-
   
     .lang-html, .lang-css, .lang-responsive {
       height: 15px;
       font-size: 8px;
     }
     .viewbox {
-     display: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-left: 100px;
+     margin-bottom: 20px;
+     width: 200px;
    }
    .next-page {
      margin-left: 50%;
@@ -618,7 +618,7 @@ textarea {
   }
 
   }
-  @media (max-width: 480px){
+  @media (max-width: 600px) {
 
   #main-section, #projects-section, #contact-section {
     margin: 10px;
@@ -630,7 +630,16 @@ textarea {
   .projects-upperline {
     width: 40vw;
   }
+
+  .viewbox {
+    display: none;
   }
+  .captions-media {
+    margin-left: 40px;
+    width: 400px;
+    display: unset;
+}
+}
 
  
     
